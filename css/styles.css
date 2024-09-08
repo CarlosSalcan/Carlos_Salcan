@@ -7,7 +7,7 @@ body {
     line-height: 1.6;
 }
 
-/* Header */
+/*-------------------------------> HEADER */
 header {
     background-color: #203e49;
     color: white;
@@ -38,7 +38,7 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* Main Content */
+/*-------------------------------> MAIN CONTENT */
 main {
     padding: 20px;
     max-width: 800px;
@@ -63,24 +63,23 @@ p {
     line-height: 1.8;
 }
 
-/* Footer */
+.email .numCell {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.email input
+.email input {
+    flex: 1;
+    /* Tomar el espacio disponible */
+}
+
+/*-------------------------------> FOOTER*/
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 20px 0;
     margin-top: 40px;
-}
-
-footer p {
-    margin: 0;
-}
-
-footer section h2 {
-    font-size: 1.5em;
-}
-
-footer section p {
-    font-size: 1.1em;
-    margin: 5px 0;
 }
