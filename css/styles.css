@@ -13,6 +13,12 @@ header {
     color: white;
     padding: 20px 0;
     text-align: center;
+
+    position: fixed; /* Fija el encabezado en la parte superior */
+    top: 0; /* Alinea el encabezado al borde superior */
+    left: 0; /* Alinea el encabezado al borde izquierdo */
+    width: 100%; /* Asegura que el encabezado ocupe todo el ancho de la pantalla */
+    z-index: 1000; /* Asegura que el encabezado se muestre por encima de otros elementos */
 }
 
 header h1 {
@@ -41,6 +47,7 @@ nav ul li a {
 /*-------------------------------> MAIN CONTENT */
 main {
     padding: 20px;
+    padding-top: 9%;
     max-width: 800px;
     margin: 20px auto;
     background-color: white;
