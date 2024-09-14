@@ -11,31 +11,50 @@ body {
 header {
     background-color: #203e49;
     color: white;
-    padding: 20px 0;
     text-align: center;
 
-    position: fixed; /* Fija el encabezado en la parte superior */
-    top: 0; /* Alinea el encabezado al borde superior */
-    left: 0; /* Alinea el encabezado al borde izquierdo */
-    width: 100%; /* Asegura que el encabezado ocupe todo el ancho de la pantalla */
-    z-index: 1000; /* Asegura que el encabezado se muestre por encima de otros elementos */
+    position: fixed;            /* Fija el encabezado en la parte superior */
+    top: 0;                     /* Alinea el encabezado al borde superior */
+    left: 0;                    /* Alinea el encabezado al borde izquierdo */
+    width: 100%;            
+    z-index: 1000;              /* Asegura que el encabezado se muestre por encima de otros elementos */
+
+    display: flex;              /* Usa flexbox para alinear los elementos */
+    flex-direction: column;     /* Organiza los elementos en una columna */
+    align-items: center;        /* Alinea los elementos horizontalmente en el centro */
+    justify-content: center;    /* Alinea los elementos verticalmente en el centro */
+    height: 205px;              
+}
+
+.profile-photo {
+    display: flex;              /* Usa flexbox para alinear elementos */
+    align-items: center;        /* Alinea verticalmente en el centro */
+    gap: 15px;                  /* Espacio entre la imagen y el texto */
+}
+
+.profile-photo img {
+    width: 125px;               
+    height: 125px;              
+    border-radius: 50%;         /* Hacer la imagen circular */
+    object-fit: cover;          /* Asegura que la imagen cubra el área sin distorsionarse */
+    border: 2px solid #ccc;   /* Borde de la imagen */
+    margin: 20px 0 0 0;
 }
 
 header h1 {
-    margin: 0;
+    margin: 25px 0 0 15px;
     font-size: 2.5em;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 20px 0 0;
     text-align: center;
 }
 
 nav ul li {
     display: inline;
     margin: 0 15px;
+    font-size: 1.25rem;
 }
 
 nav ul li a {
@@ -76,10 +95,8 @@ p {
     align-items: center;
 }
 
-.email input
 .email input {
-    flex: 1;
-    /* Tomar el espacio disponible */
+    flex: 1;            /* Tomar el espacio disponible */
 }
 
 /*-------------------------------> FOOTER*/
