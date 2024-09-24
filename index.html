@@ -9,6 +9,18 @@
     <link rel="stylesheet" href="./css/styles.css">
     <!--=============== ICON ===============-->
     <link rel="icon" href="./img/carpeta.ico" type="image/x-icon">
+    <!--=============== EMAIL ===============-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "",
+            });
+        })();
+    </script>
 </head>
 
 <body>
@@ -101,11 +113,33 @@
             </div>
             <div class="email">
                 <input type="text" value="cdsalcan131@gmail.com" readonly>
-                <button>Enviar</button>
+                <button id="openPopup">Enviar</button>
                 <button>Copiar</button>
+
+                <div id="popup" class="popup">
+                    <div class="popup-content">
+                        <span class="close" id="closePopup">&times;</span>
+                        <h2>Hola!</h2>
+                        <form id="emailForm">
+                            <label for="name">Nombre:</label>
+                            <input type="text" id="name" name="name" required>
+
+                            <label for="email">Correo electrónico:</label>
+                            <input type="email" id="email" name="email" required>
+
+                            <label for="subject">Asunto:</label>
+                            <input type="text" id="subject" name="subject" required> <!-- Campo de Asunto -->
+
+                            <label for="message">Mensaje:</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+
+                            <button type="submit" onclick="sendMail()">Enviar</button>
+                        </form>
+                    </div>
+                </div>
             </div>
             <div class="cv">
-                <a href="./docs/cvCarlosSalcan.pdf" download class="btn">Mi Hoja de Vida</a>
+                <a href="./docs/cvCarlosSalcan.pdf" download class="btn">CV</a>
             </div>
         </section>
     </main>
@@ -115,6 +149,10 @@
     <footer>
         <p>&copy; 2024 Carlos Salcán. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="./js/email.js"></script>
+    <script src="./js/modal.js"></script>
+
 </body>
 
 </html>
