@@ -10,17 +10,7 @@
     <!--=============== ICON ===============-->
     <link rel="icon" href="./img/carpeta.ico" type="image/x-icon">
     <!--=============== EMAIL ===============-->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init({
-                publicKey: "",
-            });
-        })();
-    </script>
+
 </head>
 
 <body>
@@ -120,23 +110,38 @@
                     <div class="popup-content">
                         <span class="close" id="closePopup">&times;</span>
                         <h2>Hola!</h2>
-                        <form id="emailForm">
-                            <label for="name">Nombre:</label>
-                            <input type="text" id="name" name="name" required>
+                        <form id="contact-form">
+                            <div class="row container">
+                                <h2>Email Js with Javascript</h2>
+                                <div class="col-md-6 form-ground">
+                                    <input class="form-control" type="text" placeholder="Your Name" name="name"
+                                        id="name" required />
+                                </div>
+                                <div class="col-md-6 form-ground mt-3 mt-md-0">
+                                    <input class="form-control" type="email" name="email" id="email"
+                                        placeholder="Your email" required />
+                                </div>
 
-                            <label for="email">Correo electrónico:</label>
-                            <input type="email" id="email" name="email" required>
 
-                            <label for="subject">Asunto:</label>
-                            <input type="text" id="subject" name="subject" required> <!-- Campo de Asunto -->
-
-                            <label for="message">Mensaje:</label>
-                            <textarea id="message" name="message" rows="4" required></textarea>
-
-                            <button type="submit" onclick="sendMail()">Enviar</button>
+                                <div class="form-group mt-3">
+                                    <textarea class="form-control" placeholder="Message" name="message" rows="5"
+                                        id="message" required></textarea>
+                                </div>
+                                <div class="text-center my-2">
+                                    <button class="submit btn btn-success">Send Message</button>
+                                </div>
+                            </div>
                         </form>
+                        <!-- External Script -->
+                        <script type="text/javascript"
+                            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+                            </script>
+
                     </div>
                 </div>
+
+
+
             </div>
             <div class="cv">
                 <a href="./docs/cvCarlosSalcan.pdf" download class="btn">CV</a>
